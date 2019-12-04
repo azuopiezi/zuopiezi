@@ -1,5 +1,7 @@
-Git is a version control system.
-Git is free software.
-Git is a distributed version control system.
-Git is free software distributed under the GPL.
+
+#### github upload https://github.com/azuopiezi/zuopiezi.git
+git add Python3/
+git commit -m "修改的描述"
+git push -u origin master
+
 
