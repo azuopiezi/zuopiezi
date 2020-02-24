@@ -47,31 +47,35 @@ menu = {
 
 ###设置标志位
 back_flag = False
+exit_flag = False
 
-while not back_flag:
+while not back_flag and not exit_flag:
     for i in menu:
         print(i)
     choice = input("1>>:").strip()
+    if choice == 'b':
+        back_flag = True
+    if choice == 'q':
+        exit_flag = True
     if choice in menu:
-        while not back_flag:
+        while not back_flag and not exit_flag:
             for key2 in menu[choice]:
                 print(key2)
             choice2 = input("2>>:").strip()
+            if choice2 == 'b':
+                back_flag = True
+            if choice2 == 'q':
+                exit_flag = True
             if choice2 in menu[choice]:
-                while not back_flag:
+                while not back_flag and not exit_flag:
                     for key3 in menu[choice][choice2]:
                         print(key3)
                     choice3 = input("3>>:").strip()
                     if choice3 == 'b':
                         back_flag = True
-                    else:
-                        back_flag = False
-            if choice2 == 'b':
-                back_flag = True
-            else:
-                back_flag = False
-    if choice == 'b':
-        back_flag = True
-    else:
-        back_flag = False
-
+                    if choice3 == 'q':
+                        exit_flag = True
+                else:
+                    back_flag = False
+        else:
+            back_flag = False
