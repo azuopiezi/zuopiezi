@@ -17,19 +17,60 @@ dict2 = {'name':'guoguo','age':4,'sex':'girl'}
 #a = [1,2,3]
 a= list((1,))
 b = list([4])
-print(a)
-print(b)
+# print(a)
+# print(b)
 ##字典的操作：
 dict4 = dict((('name','guoguo'),))
-print(dict4)
+# print(dict4)
 dict4['hobby']='boy'
 dict4.setdefault('age',12)
 
-print(dict4)
+# print(dict4)
 
 ##查找
-print(dict4['name'])
-print(dict4.keys())
-print(list(dict4.keys()))
-print(list(dict4.items()))
-print(list(dict4.values()))
+# print(dict4['name'])
+# print(dict4.keys())
+# print(list(dict4.keys()))
+# print(list(dict4.items()))
+# print(list(dict4.values()))
+
+##字典循环遍历
+# dic5 = {'name':'alice','age':29}
+# print(dic5)
+# for i in dic5:
+#     print(i,dic5[i])
+#
+# for i in dic5.items():
+#     print(i)
+#
+# for i,v in dic5.items():
+#     print(i,v)
+
+
+###字符串
+
+#字符串内置方法
+
+a = '1234'
+b = 'adbc'
+# c = a +b
+# print(c)
+
+
+###拼接字符串join，控制符拼接
+c = ''.join([a,b])
+print(c)
+
+print(c.endswith(c))  ###以某个字符结尾
+print(c.startswith('12')) ###以某个字符开头
+
+st='hello kitty {name} is {age}'
+print(st.find('t')) ###查找
+print(st.expandtabs(tabsize=20))
+print(st.center(50,'$'))  ###居中
+print(st.format(name='alice',age=22))  ###格式化输出
+print('  Mystr sdftar   '.strip()) ###去掉空格、转行符
+print('mystr title'.split())
+tsd = 'mystr title'.split()
+print(''.join(tsd))
+
